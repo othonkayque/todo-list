@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+</head>
+<style>
+    body{
+        background-color: rgba(5,5,10,100%);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items: center;
+       margin-top: 35px;
+    }
+    .elementoTarefas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        width: 500px;
+        background: linear-gradient(to right, rgb(200, 40, 40), rgb(250, 80, 80));
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .tarefa{
+        margin: 20px;
+    }
+    p{
+        word-break: break-all;
+    }
+    button{
+        border-style: none;
+        border-radius: 5px;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    input{
+        border-style: none;
+        border-radius: 5px;
+        padding: 15px;
+        padding-right: 100px;
+    }
+    p::selection{
+        color: rgba(60, 20, 200, 100%);
+        background-color: rgba(5,5,10,100%);
+    }
+    input:focus{
+        outline: none;
+    }
+    
+    #checkboxs{
+        margin: 20px;
+    }
+    
+    #checkboxs input{
+        display: none;
+    }
+
+    #checkboxs input:checked + label::before{
+        content: '';
+        width: 35px;
+        height: 35px;
+        background-color: rgba(20, 20, 20, 100%);
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    #checkboxs input + label::before{
+        content: '';
+        width: 35px;
+        height: 35px;
+        background-color: rgba(290, 290, 290, 100%);
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+
+</style>
+<body>
+   
+    <div id="container">
+        <div>
+            <input type="text" id="TarefaInput">
+            <button type="submit" id="buttonSendTarefa">Salvar</button>
+        </div>
+        <div id="conteudo">
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
